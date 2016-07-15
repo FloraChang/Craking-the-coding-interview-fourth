@@ -13,16 +13,16 @@ bool isRotation( string a, string b );
 
 int main(int argc, char *argv[])
 {
-    string a="apple";
-    string b="leapp";
+    string a = "apple";
+    string b = "leapp";
 
     if( isRotation( a, b ) )
     {
-        cout<<b<<" is a rotation of "<<a<<endl;
+        cout<< b <<" is a rotation of " << a << endl;
     }
     else
     {
-        cout<<b<<" is not a rotation of "<<a<<endl;
+        cout<< b <<" is not a rotation of "<< a << endl;
     }
     return 1;
 }
@@ -33,7 +33,6 @@ bool isSubString( string a, string b )
     {
         return true;
     }
-    
     return false;
 }
 
@@ -45,6 +44,6 @@ bool isRotation( string a, string b )
     }
     else
     {
-        return isSubString( a+a, b);
+        return isSubString( a + a, b ); // key idea is to concatenate "string a" itself
     }
 }
